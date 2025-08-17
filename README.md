@@ -42,6 +42,24 @@ Line 1 win: $8
 Spin won: $8
 Gamble win? (y/n):
 ```
+## Project Timeline
+- **Jan 2025**: Initial prototype built locally (basic 3×3 reels, payouts)
+- **Mar 2025**: Added volatility presets, wilds/bonus, paylines, autospin, persistence
+- **Aug 18, 2025**: Cleaned up and published to GitHub (first public release)
+
+## How it Works (Quick)
+- **Reels/Grid**: 3×3 grid; reels are sampled from a weighted symbol pool (volatility changes weights)
+- **Paylines**: Choose 3/5/8 (rows; +diagonals; +verticals). A line pays if all three match, wilds `W` substitute
+- **Wilds**: `W` substitutes and **2×** the payout for that line
+- **Bonus**: `*` does not pay on lines; **3 anywhere** triggers **3 free spins @ 2×** (retrigger +1)
+- **Gamble**: Optional double-or-nothing on each win
+- **Persistence**: Balance + lifetime stats saved to `slot_profile.json`
+
+## Roadmap / Ideas
+- Configurable payouts/weights via `config.json`
+- Session analytics (hit rate, RTP estimate after N spins)
+- `--no-color` flag for dumb terminals; unit tests for payline logic
+
 
 ## 📁 Files
 ```
